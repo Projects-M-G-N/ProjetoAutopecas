@@ -81,6 +81,7 @@ header a {
     font-size: 1em;
     transition: all 0.3s ease;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bolder;
 }
 
 .search-bar button:hover {
@@ -114,17 +115,18 @@ header a {
     display: block;
     text-align: center;
     transition: background-color 0.3s;
-    font-size: 1.2em;
+    font-size: 1.5rem;
 }
 
 .navbar a:hover {
     background-color: var(--navbar-link-hover-background-color);
 }
 
-.navbar-icon {
-    width: 34px;
-    height: 34px;
+.navbar ul li a .bi {
+    font-size: 1.5rem;
 }
+
+
 
 main {
     margin: 20px auto;

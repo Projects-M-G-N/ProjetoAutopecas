@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ipueira - Peças Mecânicas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/inicio.css">
     
 </head>
@@ -25,8 +26,7 @@
             <li><a href="login.php">Login</a></li>
             <li><a href="cadastro.php">Cadastro</a></li>
             <li><a href="produtos.php">Produtos</a></li>
-            
-            <li><a href="index.html"><img src="img/carrinho-icon.png" alt="Carrinho" class="navbar-icon"></a></li>
+            <li><a href="index.html"><i class="bi bi-cart" class="navbar-icon"></i></a></li>
         </ul>
     </nav>
 
