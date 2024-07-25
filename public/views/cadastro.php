@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="public/assets/css/cadastro.css">
     <title>Cadastro</title>
 </head>
 <body>
     <header>
-        <a href="index.php"><h1>Cadastro - Ipueira</h1></a>
+        <a href="./"><h1>Cadastro - Ipueira</h1></a>
     </header>
     <div class="box">
-        <form action="config.php" method="post">
+        <form action="./" method="post">
             <h1>Cadastro de Usuário</h1>
             <div class="inputbox">
                 <input type="text" name="nome" id="nome" class="inputUser" placeholder="Nome Completo" required>
@@ -21,7 +21,7 @@
                 <input type="date" name="data_nasc" id="data_nasc" class="inputUser" placeholder="Data de Nascimento" required>
                 <input type="text" name="endereco" id="endereco" class="inputUser" placeholder="Endereço" required>
             </div>
-            <input type="submit" name="submit" id="submit" value="Cadastrar">
+            <input type="submit" name="cadastrar" id="submit" value="Cadastrar">
         </form>
     </div>
 </body>

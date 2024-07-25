@@ -7,7 +7,7 @@
     <title>Ipueira - Peças Mecânicas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="public/assets/css/inicio.css">
     
 </head>
 <body>
@@ -26,7 +26,7 @@
             <li><a href="login.php">Login</a></li>
             <li><a href="cadastro.php">Cadastro</a></li>
             <li><a href="produtos.php">Produtos</a></li>
-            <li><a href="index.html"><i class="bi bi-cart" class="navbar-icon"></i></a></li>
+            <li><a href=""><i class="bi bi-cart" class="navbar-icon"></i></a></li>
         </ul>
     </nav>
 
@@ -34,7 +34,7 @@
         <h1>Produtos</h1>
         <div class="product-list">
             <div class="card promotion">
-                <img src="img/corrente-de-esteira.jpg" alt="Corrente de esteira">
+                <img src="public/assets/img/corrente-de-esteira.jpg" alt="Corrente de esteira">
                 <div class="card-content">
                     <h2>Corrente de esteira</h2>
                     <div class="price">
@@ -46,7 +46,7 @@
             </div>
 
             <div class="card promotion">
-                <img src="img/pneu.jpg" alt="Pneu de escavadeira">
+                <img src="public/assets/img/pneu.jpg" alt="Pneu de escavadeira">
                 <div class="card-content">
                     <h2>Pneu de escavadeira</h2>
                     <div class="price">
@@ -58,7 +58,7 @@
             </div>
 
             <div class="card promotion">
-                <img src="img/filtro-de-oleo.jpg" alt="Filtro de óleo">
+                <img src="public/assets/img/filtro-de-oleo.jpg" alt="Filtro de óleo">
                 <div class="card-content">
                     <h2>Filtro de óleo</h2>
                     <div class="price">
@@ -70,7 +70,7 @@
             </div>
 
             <div class="card promotion">
-                <img src="img/retentores-de-cilindoros.jpg" alt="Retentores de cilindros">
+                <img src="public/assets/img/retentores-de-cilindoros.jpg" alt="Retentores de cilindros">
                 <div class="card-content">
                     <h2>Retentores de cilindros</h2>
                     <div class="price">
@@ -82,7 +82,7 @@
             </div>
 
             <div class="card promotion">
-                <img src="img/disco_de_freio.jpg" alt="Disco de freio">
+                <img src="public/assets/img/disco_de_freio.jpg" alt="Disco de freio">
                 <div class="card-content">
                     <h2>Disco de freio</h2>
                     <div class="price">
@@ -94,7 +94,7 @@
             </div>
 
             <div class="card promotion">
-                <img src="img/bomba_injetora.jpg" alt="Bomba injetora">
+                <img src="public/assets/img/bomba_injetora.jpg" alt="Bomba injetora">
                 <div class="card-content">
                     <h2>Bomba injetora</h2>
                     <div class="price">
@@ -106,7 +106,7 @@
             </div>
 
             <div class="card">
-                <img src="img/corrente-de-esteira.jpg" alt="Corrente de esteira">
+                <img src="public/assets/img/corrente-de-esteira.jpg" alt="Corrente de esteira">
                 <div class="card-content">
                     <h2>Corrente de esteira</h2>
                     <div class="price">
@@ -117,7 +117,7 @@
             </div>
 
             <div class="card">
-                <img src="img/pneu.jpg" alt="Pneu de escavadeira">
+                <img src="public/assets/img/pneu.jpg" alt="Pneu de escavadeira">
                 <div class="card-content">
                     <h2>Pneu de escavadeira</h2>
                     <div class="price">
@@ -128,7 +128,7 @@
             </div>
 
             <div class="card">
-                <img src="img/filtro-de-oleo.jpg" alt="Filtro de óleo">
+                <img src="public/assets/img/filtro-de-oleo.jpg" alt="Filtro de óleo">
                 <div class="card-content">
                     <h2>Filtro de óleo</h2>
                     <div class="price">
@@ -139,7 +139,7 @@
             </div>
 
             <div class="card">
-                <img src="img/retentores-de-cilindoros.jpg" alt="Retentores de cilindros">
+                <img src="public/assets/img/retentores-de-cilindoros.jpg" alt="Retentores de cilindros">
                 <div class="card-content">
                     <h2>Retentores de cilindros</h2>
                     <div class="price">
@@ -150,7 +150,7 @@
             </div>
 
             <div class="card">
-                <img src="img/disco_de_freio.jpg" alt="Disco de freio">
+                <img src="public/assets/img/disco_de_freio.jpg" alt="Disco de freio">
                 <div class="card-content">
                     <h2>Disco de freio</h2>
                     <div class="price">
@@ -161,7 +161,7 @@
             </div>
 
             <div class="card">
-                <img src="img/bomba_injetora.jpg" alt="Bomba injetora">
+                <img src="public/assets/img/bomba_injetora.jpg" alt="Bomba injetora">
                 <div class="card-content">
                     <h2>Bomba injetora</h2>
                     <div class="price">
