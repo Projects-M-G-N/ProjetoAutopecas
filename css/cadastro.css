@@ -1,0 +1,109 @@
+:root {
+    --background-color: #fffde7;
+    --header-background-color: #ffca28;
+    --search-border-color: #ffca28;
+    --search-focus-border-color: #fbc02d;
+    --button-background-color: #ffca28;
+    --button-hover-background-color: #fbc02d;
+    --navbar-background-color: #333;
+    --navbar-link-color: white;
+    --navbar-link-hover-background-color: #555;
+    --card-background-color: #fffde7;
+    --price-color: #ffca28;
+    --original-price-color: #999;
+    --promotion-border-color: #ff9800;
+    --promotion-background-color: #ff9800;
+    --text-color: #333;
+    --card-text-color: #555;
+    --button-text-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--header-background-color);
+    color: var(--navbar-link-color);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--navbar-link-color);
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 90px);
+    background: linear-gradient(to right, var(--header-background-color), var(--search-focus-border-color));
+}
+
+form {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+form h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: var(--text-color);
+}
+
+.inputbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+}
+
+.inputUser {
+    width: calc(50% - 15px);
+    padding: 15px;
+    border: 2px solid var(--search-border-color);
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.inputUser:focus {
+    border-color: var(--search-focus-border-color);
+    box-shadow: 0 0 5px var(--search-focus-border-color);
+}
+
+input[type="submit"] {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 15px;
+    width: calc(50% - 15px);
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--button-hover-background-color);
+    transform: scale(1.05);
+}
