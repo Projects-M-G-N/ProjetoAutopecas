@@ -1,34 +1,14 @@
-:root {
-    --background-color: #fffde7;
-    --header-background-color: #ffca28;
-    --search-border-color: #ffca28;
-    --search-focus-border-color: #fbc02d;
-    --button-background-color: #ffca28;
-    --button-hover-background-color: #fbc02d;
-    --navbar-background-color: #333;
-    --navbar-link-color: white;
-    --navbar-link-hover-background-color: #555;
-    --card-background-color: #fffde7;
-    --price-color: #ffca28;
-    --original-price-color: #999;
-    --promotion-border-color: #ff9800;
-    --promotion-background-color: #ff9800;
-    --text-color: #333;
-    --card-text-color: #555;
-    --button-text-color: #ffffff;
-}
-
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #fffde7;
+    color: #fff;
 }
 
 header {
-    background-color: var(--header-background-color);
-    color: var(--navbar-link-color);
+    background-color: #ffca28;
+    color: #fff;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -41,7 +21,7 @@ header h1 {
 
 header a {
     text-decoration: none;
-    color: var(--navbar-link-color);
+    color: #fff;
 }
 
 .box {
@@ -49,7 +29,7 @@ header a {
     justify-content: center;
     align-items: center;
     height: calc(100vh - 90px);
-    background: linear-gradient(to bottom right, var(--header-background-color) 60%, var(--search-focus-border-color));
+    background: linear-gradient(to bottom right, #ffca28 60%, #fbc02d);
 }
 
 form {
@@ -65,7 +45,7 @@ form {
 form h1 {
     margin-bottom: 20px;
     font-size: 2em;
-    color: var(--text-color);
+    color: #fff;
 }
 
 .inputbox {
@@ -78,7 +58,7 @@ form h1 {
 .inputUser {
     width: calc(50% - 15px);
     padding: 15px;
-    border: 2px solid var(--search-border-color);
+    border: 2px solid #ffca28;
     border-radius: 5px;
     font-size: 1em;
     box-sizing: border-box;
@@ -86,13 +66,13 @@ form h1 {
 }
 
 .inputUser:focus {
-    border-color: var(--search-focus-border-color);
-    box-shadow: 0 0 5px var(--search-focus-border-color);
+    border-color: #fbc02d;
+    box-shadow: 0 0 5px #fbc02d;
 }
 
 input[type="submit"] {
-    background-color: var(--button-background-color);
-    color: var(--button-text-color);
+    background-color: #ffca28;
+    color: #fff;
     border: none;
     padding: 15px;
     width: calc(50% - 15px);
@@ -104,6 +84,6 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: var(--button-hover-background-color);
+    background-color: #fbc02d;
     transform: scale(1.05);
 }

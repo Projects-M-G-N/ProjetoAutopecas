@@ -1,35 +1,15 @@
-:root {
-    --background-color: #fffde7;
-    --header-background-color: #ffd700;
-    --search-border-color: #ffd700;
-    --search-focus-border-color: #e6b800;
-    --button-background-color: #ffd700;
-    --button-hover-background-color: #e6b800;
-    --navbar-background-color: #333;
-    --navbar-link-color: white;
-    --navbar-link-hover-background-color: #555;
-    --card-background-color: #fffde7;
-    --price-color: #ffd700;
-    --original-price-color: #999;
-    --promotion-border-color: #ff9800;
-    --promotion-background-color: #ff9800;
-    --text-color: #333;
-    --card-text-color: #555;
-    --button-text-color: #ffffff;
-}
-
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
+    background-color: #fffde7;
+    color: #333;
     zoom: 0.9;
 }
 
 header {
-    background-color: var(--header-background-color);
-    color: var(--text-color);
+    background-color: #ffd700;
+    color: #333;
     padding: 20px;
     text-align: center;
     position: relative;
@@ -38,7 +18,7 @@ header {
 
 header h1 {
     text-decoration: none;
-    color: var(--text-color);
+    color: #333;
     margin: 0;
     font-size: 2.5em;
 }
@@ -56,7 +36,7 @@ header a {
 
 .search-bar input[type="text"] {
     padding: 12px 20px;
-    border: 2px solid var(--search-border-color);
+    border: 2px solid #ffd700;
     border-radius: 30px 0 0 30px;
     width: 80%;
     max-width: 500px;
@@ -67,14 +47,14 @@ header a {
 }
 
 .search-bar input[type="text"]:focus {
-    border-color: var(--search-focus-border-color);
+    border-color: #e6b800;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .search-bar button {
-    background-color: var(--search-border-color);
-    color: var(--text-color);
-    border: 2px solid var(--search-border-color);
+    background-color: #ffd700;
+    color: #333;
+    border: 2px solid #ffd700;
     border-radius: 0 30px 30px 0;
     padding: 12px 20px;
     cursor: pointer;
@@ -85,12 +65,12 @@ header a {
 }
 
 .search-bar button:hover {
-    background-color: var(--button-hover-background-color);
+    background-color: #e6b800;
     transform: scale(1.05);
 }
 
 .navbar {
-    background-color: var(--navbar-background-color);
+    background-color: #333;
     padding: 10px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -109,7 +89,7 @@ header a {
 }
 
 .navbar a {
-    color: var(--navbar-link-color);
+    color: #fff;
     text-decoration: none;
     padding: 15px;
     display: block;
@@ -119,7 +99,7 @@ header a {
 }
 
 .navbar a:hover {
-    background-color: var(--navbar-link-hover-background-color);
+    background-color: #555;
 }
 
 .navbar ul li a .bi {
@@ -138,7 +118,7 @@ h1 {
     text-align: center;
     margin: 20px 0;
     font-size: 2.5em;
-    color: var(--text-color);
+    color: #333;
 }
 
 .product-list {
@@ -149,8 +129,8 @@ h1 {
 }
 
 .card {
-    background-color: var(--card-background-color);
-    color: var(--text-color);
+    background-color: #fffde7;
+    color: #333;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: calc(25% - 20px);
@@ -181,12 +161,12 @@ h1 {
 .card-content h2 {
     font-size: 1.2em;
     margin: 10px 0;
-    color: var(--card-text-color);
+    color: #555;
 }
 
 .price {
     font-size: 1.1em;
-    color: var(--price-color);
+    color: #ffd700;
     margin: 10px 0;
     display: flex;
     justify-content: center;
@@ -195,14 +175,14 @@ h1 {
 
 .original-price {
     font-size: 0.9em;
-    color: var(--original-price-color);
+    color: #999;
     text-decoration: line-through;
     margin-left: 5px;
 }
 
 button {
-    background-color: var(--button-background-color);
-    color: var(--button-text-color);
+    background-color: #ffd700;
+    color: #fff;
     border: none;
     padding: 10px 15px;
     text-align: center;
@@ -216,12 +196,12 @@ button {
 }
 
 button:hover {
-    background-color: var(--button-hover-background-color);
+    background-color: #e6b800;
     transform: scale(1.05);
 }
 
 .promotion {
-    border: 2px solid var(--promotion-border-color);
+    border: 2px solid #ff9800;
     border-radius: 10px;
     position: relative;
 }
@@ -229,7 +209,7 @@ button:hover {
 .promotion::before {
     content: "Promoção";
     color: white;
-    background-color: var(--promotion-background-color);
+    background-color: #ff9800;
     font-size: 0.9em;
     font-weight: bold;
     padding: 5px 10px;
