@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <a href="./"><h1>Cadastro - Ipueira</h1></a>
+        <a href="./"><h1>Cadastro - SCAP</h1></a>
     </header>
     <div class="box">
         <form action="./" method="post">

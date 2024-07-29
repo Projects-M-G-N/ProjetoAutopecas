@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ipueira - Peças Mecânicas</title>
+    <title>SCAP - Peças Mecânicas</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="public/assets/css/inicio.css">
-    
+
 </head>
+
 <body>
     <header>
-        <a href="index.php"><h1>Ipueira</h1></a>
+        <a href="index.php">
+            <h1>SCAP</h1>
+        </a>
         <div class="search-bar">
             <input type="text" placeholder="Buscar...">
             <button><i class="fas fa-search"></i></button>
@@ -22,10 +26,13 @@
 
     <nav class="navbar">
         <ul>
-            
-            <li><a href="login.php">Login</a></li>
-            <li><a href="cadastro.php">Cadastro</a></li>
-            <li><a href="produtos.php">Produtos</a></li>
+            <?php
+            if (!isset($_SESSION['login'])) {
+            ?>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="cadastro.php">Cadastro</a></li>
+            <?php } ?>
+            <li><a href="">Produtos</a></li>
             <li><a href=""><i class="bi bi-cart" class="navbar-icon"></i></a></li>
         </ul>
     </nav>
@@ -173,4 +180,5 @@
         </div>
     </main>
 </body>
+
 </html>
