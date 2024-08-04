@@ -18,7 +18,7 @@
     <main>
         <div class="login-container">
             <h1>Login</h1>
-            <form action="./" method="post">
+            <form action="" method="post">
                 <input type="email" placeholder="Digite seu e-mail" name="email" required>
                 <input type="password" placeholder="Senha" name="senha" required>
                 <button type="submit" name="login">Entrar</button>

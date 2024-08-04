@@ -21,7 +21,7 @@ if (isset($_POST['cadastrar'])) {
     $endereco = $_POST['endereco'];
     $result = mysqli_query($conexao, "INSERT INTO cliente VALUES (NULL, '$nome','$email','$senha','$telefone','$data','$endereco')");
     $_SESSION['login'] = true;
-    echo "<script>window.locate.href = './'</script>";
+    echo "<script>window.location.href = './'</script>";
 }
 
 if (isset($_POST['login'])) {
@@ -35,9 +35,27 @@ if (isset($_POST['login'])) {
             echo "<script>alert('Senha Incorreta')</script>";
         } else {
             $_SESSION['login'] = true;
-            echo "<script>window.locate.href = './'</script>";
+            echo "<script>window.location.href = './'</script>";
         }
     } else {
         echo "<script>alert('E-mail não cadastrado!')</script>";
     }
+}
+
+if (isset($_POST['cadProduto'])) {
+    $nome = $_POST['nome'];
+    $descricao = $_POST['descricao'];
+    $preco = $_POST['preco'];
+    $img = $_FILES["img"]["name"];
+    $novo_nome_do_arquivo = uniqid();
+    $extensao = strtolower(pathinfo($img, PATHINFO_EXTENSION));
+    $img_nome = $novo_nome_do_arquivo . "." .  $extensao;
+    move_uploaded_file($_FILES['img']['tmp_name'], "../public/assets/img/" . $img_nome);
+    $quantidade = $_POST['quantidade'];
+    $fornecedor = $_POST['fornecedor'];
+
+    $comando = mysqli_query($conexao, "INSERT INTO produto VALUES (NULL, '$nome', '$descricao', '$preco', '$img_nome', '$quantidade', '1')");
+
+
+    echo "<script>window.location.href = './'</script>";
 }

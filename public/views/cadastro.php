@@ -11,7 +11,7 @@
         <a href="./"><h1>Cadastro - SCAP</h1></a>
     </header>
     <div class="box">
-        <form action="./" method="post">
+        <form action="" method="post">
             <h1>Cadastro de Usuário</h1>
             <div class="inputbox">
                 <input type="text" name="nome" id="nome" class="inputUser" placeholder="Nome Completo" required>

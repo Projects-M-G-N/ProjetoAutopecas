@@ -1,3 +1,12 @@
+<?php
+
+require '../config.php';
+
+$produtos = mysqli_query($conexao, "SELECT * FROM produto");
+
+$produto = mysqli_fetch_all($produtos);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -46,143 +55,19 @@
     <main>
         <h1>Produtos</h1>
         <div class="product-list">
-            <div class="card promotion">
-                <img src="public/assets/img/corrente-de-esteira.jpg" alt="Corrente de esteira">
-                <div class="card-content">
-                    <h2>Corrente de esteira</h2>
-                    <div class="price">
-                        R$ 10.000,00
-                        <span class="original-price">R$ 12.000,00</span>
+            <?php
+            for ($i = 0; $i < mysqli_num_rows($produtos); $i++) { ?>
+                <div class="card">
+                    <img src="public/assets/img/<?= $produto[$i][4] ?>" alt="<?= $produto[$i][1] ?>">
+                    <div class="card-content">
+                        <h2><?= $produto[$i][1] ?></h2>
+                        <div class="price">
+                            <?= $produto[$i][3] ?>
+                        </div>
+                        <button>Adicionar ao carrinho</button>
                     </div>
-                    <button>Adicionar ao carrinho</button>
                 </div>
-            </div>
-
-            <div class="card promotion">
-                <img src="public/assets/img/pneu.jpg" alt="Pneu de escavadeira">
-                <div class="card-content">
-                    <h2>Pneu de escavadeira</h2>
-                    <div class="price">
-                        R$ 1.000,00
-                        <span class="original-price">R$ 1.200,00</span>
-                    </div>
-                    <button>Adicionar ao carrinho</button>
-                </div>
-            </div>
-
-            <div class="card promotion">
-                <img src="public/assets/img/filtro-de-oleo.jpg" alt="Filtro de óleo">
-                <div class="card-content">
-                    <h2>Filtro de óleo</h2>
-                    <div class="price">
-                        R$ 140,00
-                        <span class="original-price">R$ 160,00</span>
-                    </div>
-                    <button>Adicionar ao carrinho</button>
-                </div>
-            </div>
-
-            <div class="card promotion">
-                <img src="public/assets/img/retentores-de-cilindoros.jpg" alt="Retentores de cilindros">
-                <div class="card-content">
-                    <h2>Retentores de cilindros</h2>
-                    <div class="price">
-                        R$ 180,00
-                        <span class="original-price">R$ 200,00</span>
-                    </div>
-                    <button>Adicionar ao carrinho</button>
-                </div>
-            </div>
-
-            <div class="card promotion">
-                <img src="public/assets/img/disco_de_freio.jpg" alt="Disco de freio">
-                <div class="card-content">
-                    <h2>Disco de freio</h2>
-                    <div class="price">
-                        R$ 1.200,00
-                        <span class="original-price">R$ 1.400,00</span>
-                    </div>
-                    <button>Adicionar ao carrinho</button>
-                </div>
-            </div>
-
-            <div class="card promotion">
-                <img src="public/assets/img/bomba_injetora.jpg" alt="Bomba injetora">
-                <div class="card-content">
-                    <h2>Bomba injetora</h2>
-                    <div class="price">
-                        R$ 8.000,00
-                        <span class="original-price">R$ 9.000,00</span>
-                    </div>
-                    <button>Adicionar ao carrinho</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="public/assets/img/corrente-de-esteira.jpg" alt="Corrente de esteira">
-                <div class="card-content">
-                    <h2>Corrente de esteira</h2>
-                    <div class="price">
-                        R$ 12.000,00
-                    </div>
-                    <button>Adicionar ao carrinho</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="public/assets/img/pneu.jpg" alt="Pneu de escavadeira">
-                <div class="card-content">
-                    <h2>Pneu de escavadeira</h2>
-                    <div class="price">
-                        R$ 1.200,00
-                    </div>
-                    <button>Adicionar ao carrinho</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="public/assets/img/filtro-de-oleo.jpg" alt="Filtro de óleo">
-                <div class="card-content">
-                    <h2>Filtro de óleo</h2>
-                    <div class="price">
-                        R$ 160,00
-                    </div>
-                    <button>Adicionar ao carrinho</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="public/assets/img/retentores-de-cilindoros.jpg" alt="Retentores de cilindros">
-                <div class="card-content">
-                    <h2>Retentores de cilindros</h2>
-                    <div class="price">
-                        R$ 200,00
-                    </div>
-                    <button>Adicionar ao carrinho</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="public/assets/img/disco_de_freio.jpg" alt="Disco de freio">
-                <div class="card-content">
-                    <h2>Disco de freio</h2>
-                    <div class="price">
-                        R$ 1.400,00
-                    </div>
-                    <button>Adicionar ao carrinho</button>
-                </div>
-            </div>
-
-            <div class="card">
-                <img src="public/assets/img/bomba_injetora.jpg" alt="Bomba injetora">
-                <div class="card-content">
-                    <h2>Bomba injetora</h2>
-                    <div class="price">
-                        R$ 9.000,00
-                    </div>
-                    <button>Adicionar ao carrinho</button>
-                </div>
-            </div>
+            <?php } ?>
         </div>
     </main>
 </body>
