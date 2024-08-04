@@ -34,6 +34,11 @@
             <?php } ?>
             <li><a href="">Produtos</a></li>
             <li><a href=""><i class="bi bi-cart" class="navbar-icon"></i></a></li>
+            <?php
+            if (isset($_SESSION['login'])) {
+            ?>
+                <li><a href="cadProduto.php">Cadastrar Produto</a></li>
+            <?php } ?>
         </ul>
     </nav>
 
