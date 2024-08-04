@@ -37,7 +37,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 400px;
+    max-width: 800px;
     text-align: center;
     position: relative;
 }
@@ -53,25 +53,31 @@ main {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
-
-.cad-container h1 {
-    font-size: 2em;
-    color: #333;
+.cad-container .caixa-input {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
-
+.cad-container .caixa-input .caixa {
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
 .cad-container label{
     font-size: 1.1em;
     color: #333;
     font-weight: bolder;
+    margin-bottom: 15px;
 }
 .cad-container input, .cad-container textarea {
-    width: calc(100% - 20px);
-    padding: 15px;
-    margin: 10px 0 0 5px;
-    border: 2px solid #ffd700;
-    border-radius: 5px;
+    width: 100%;
     font-size: 1em;
+    padding: 15px;
+    border: 2px solid #ffca28;
+    border-radius: 5px;
     box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .cad-container input:focus {
