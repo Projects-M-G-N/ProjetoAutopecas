@@ -38,6 +38,7 @@
             if (isset($_SESSION['login'])) {
             ?>
                 <li><a href="cadProduto.php">Cadastrar Produto</a></li>
+                <li><a href="logout.php">Sair</a></li>
             <?php } ?>
         </ul>
     </nav>

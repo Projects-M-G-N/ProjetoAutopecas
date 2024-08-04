@@ -31,7 +31,7 @@ main {
     background: linear-gradient(to bottom right, #ffd700 40%, #e6b800);
 }
 
-.login-container {
+.cad-container {
     background-color: white;
     padding: 40px;
     border-radius: 10px;
@@ -42,7 +42,7 @@ main {
     position: relative;
 }
 
-.login-container::before {
+.cad-container::before {
     content: '';
     position: absolute;
     top: 0;
@@ -54,29 +54,33 @@ main {
     border-top-right-radius: 10px;
 }
 
-.login-container h1 {
-    margin-bottom: 20px;
+.cad-container h1 {
     font-size: 2em;
     color: #333;
 }
 
-.login-container input {
+.cad-container label{
+    font-size: 1.1em;
+    color: #333;
+    font-weight: bolder;
+}
+.cad-container input, .cad-container textarea {
     width: calc(100% - 20px);
     padding: 15px;
-    margin: 10px 0;
+    margin: 10px 0 0 5px;
     border: 2px solid #ffd700;
     border-radius: 5px;
     font-size: 1em;
     box-sizing: border-box;
 }
 
-.login-container input:focus {
+.cad-container input:focus {
     border-color: #e6b800;
     outline: none;
     box-shadow: 0 0 5px #e6b800;
 }
 
-.login-container button {
+.cad-container input[type="submit"] {
     background-color: #ffd700;
     color: #fff;
     border: none;
@@ -89,7 +93,7 @@ main {
     margin-top: 10px;
 }
 
-.login-container button:hover {
+.cad-container input[type="submit"]:hover {
     background-color: #e6b800;
     transform: scale(1.05);
 }
