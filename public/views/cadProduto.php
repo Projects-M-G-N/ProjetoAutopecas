@@ -19,7 +19,7 @@ if (!isset($_SESSION['login'])) {
 <body>
     <header>
         <a href="index.php">
-            <h1>Cadastrar Produto - SCAP</h1>
+            <h1>Cadastrar Produto - Super Auto peças</h1>
         </a>
     </header>
     <main>

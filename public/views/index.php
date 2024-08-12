@@ -14,7 +14,7 @@ $produto = mysqli_fetch_all($produtos);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SCAP - Peças Mecânicas</title>
+    <title>Super Auto peças</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="public/assets/css/inicio.css">
@@ -24,7 +24,7 @@ $produto = mysqli_fetch_all($produtos);
 <body>
     <header>
         <a href="index.php">
-            <h1>SCAP</h1>
+            <h1>Super Auto peças</h1>
         </a>
         <div class="search-bar">
             <input type="text" placeholder="Buscar...">
@@ -41,7 +41,7 @@ $produto = mysqli_fetch_all($produtos);
                 <li><a href="login.php">Login</a></li>
                 <li><a href="cadastro.php">Cadastro</a></li>
             <?php } ?>
-            <li><a href="">Produtos</a></li>
+            <li><a href="problemas.php">Problemas</a></li>
             <li><a href=""><i class="bi bi-cart" class="navbar-icon"></i></a></li>
             <?php
             if (isset($_SESSION['login'])) {

@@ -6,13 +6,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/assets/css/login.css">
-    <title>Login - SCAP</title>
+    <title>Login - Super Auto peças</title>
 </head>
 
 <body>
     <header>
         <a href="index.php">
-            <h1>Login - SCAP</h1>
+            <h1>Login - Super Auto peças</h1>
         </a>
     </header>
     <main>
