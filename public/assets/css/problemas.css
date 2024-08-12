@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #ffca28 60%, #fbc02d);
+    color: #333;
+    zoom: 0.9;
+}
+
+.problemas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.problemas select {
+    padding: 12px 20px;
+    border: 2px solid #ffd700;
+    border-radius: 30px;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    background-color: #fff;
+    color: #333;
+}
+
+.problemas select:focus {
+    border-color: #e6b800;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px auto 0 auto;
+    max-width: 600px;
+    background-color: #fffde7;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.produto img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.produto-content h2 {
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #555;
+}
+
+.price {
+    font-size: 1.3em;
+    color: #333;
+    margin: 20px 0;
+}
+
+button#comprar {
+    background-color: #ffd700;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button#comprar:hover {
+    background-color: #e6b800;
+    transform: scale(1.05);
+}

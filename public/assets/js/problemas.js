@@ -1,5 +1,5 @@
 const problemas = [
-    ["", "Selecione o problema", ""],
+    ["default.png", "Selecione o problema", ""],
     ["pneu.jpg", "Pneu", "R$ 199,99"],
     ["bomba_injetora.jpg", "Bomba Injetora", "R$ 399,99"],
     ["filtro-de-oleo.jpg", "Oleo", "R$ 100,00"],
