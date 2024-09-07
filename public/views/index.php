@@ -32,7 +32,7 @@ $produto = mysqli_fetch_all($produtos);
         </div>
         <?php if (isset($_SESSION['login'])) { ?>
             <div class="user">
-                <a href="./user.php" class="user-btn"><i class="bi bi-person-circle"></i></a>
+                <a href="user.php" class="user-btn" title="Seu perfil"><i class="bi bi-person-circle"></i></a>
             </div>
         <?php } ?>
 

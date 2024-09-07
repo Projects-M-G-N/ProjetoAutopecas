@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/assets/css/problemas.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Problemas</title>
 </head>
 <body>
+    <header>
+        <div class="sair">
+            <a href="index.php" class="sair-btn" title="Voltar"><i class="bi bi-arrow-left-circle"></i></a>
+        </div>
+    </header>
     <div class="problemas">
         <select name="problema" id="problema" onchange="verProduto(this.value)">
             <option value="0" disabled selected>...</option>
