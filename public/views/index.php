@@ -30,6 +30,11 @@ $produto = mysqli_fetch_all($produtos);
             <input type="text" placeholder="Buscar...">
             <button><i class="fas fa-search"></i></button>
         </div>
+        <?php if (isset($_SESSION['login'])) { ?>
+            <div class="user">
+                <a href="./user.php" class="user-btn"><i class="bi bi-person-circle"></i></a>
+            </div>
+        <?php } ?>
 
     </header>
 
@@ -42,13 +47,12 @@ $produto = mysqli_fetch_all($produtos);
                 <li><a href="cadastro.php">Cadastro</a></li>
             <?php } ?>
             <li><a href="problemas.php">Problemas</a></li>
-            <li><a href=""><i class="bi bi-cart" class="navbar-icon"></i></a></li>
             <?php
             if (isset($_SESSION['login'])) {
             ?>
                 <li><a href="cadProduto.php">Cadastrar Produto</a></li>
-                <li><a href="logout.php">Sair</a></li>
             <?php } ?>
+            <li><a href=""><i class="bi bi-cart" class="navbar-icon"></i></a></li>
         </ul>
     </nav>
 
