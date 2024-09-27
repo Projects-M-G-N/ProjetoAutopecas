@@ -20,7 +20,7 @@
             <img src="public/assets/img/default.png" alt="Foto do Perfil" class="perfil-foto">
             <h2 class="perfil-nome">Nome do Usuário</h2>
             <p class="perfil-email">email@exemplo.com</p>
-            <p class="perfil-endereco">Rua XXXXX - nuemro XX</p>
+            <p class="perfil-endereco">Rua XXXXX - numero XX</p>
             <button class="editar-perfil">Editar Perfil</button>
         </section>
         <a href="./logout.php" class="sair"><i class="bi bi-box-arrow-right"></i> Sair</a>
