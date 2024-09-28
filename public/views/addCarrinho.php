@@ -5,11 +5,11 @@ if (isset($_GET['idProd'])) {
         $carrinho = unserialize($strCarrinho);
         array_push($carrinho, $_GET['idProd']);
         $strCarrinho = serialize($carrinho);
-        setcookie("itens", $strCarrinho);
+        setcookie("itens", $strCarrinho, time()+360000);
     } else {
         $carrinho = [$_GET['idProd']];
         $strCarrinho = serialize($carrinho);
-        setcookie("itens", $strCarrinho);
+        setcookie("itens", $strCarrinho, time()+360000);
     }
 }
 
