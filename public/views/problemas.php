@@ -38,7 +38,7 @@
             ?>
                 <li><a href="cadProduto.php">Cadastrar Produto</a></li>
             <?php } ?>
-            <li><a href=""><i class="bi bi-cart" class="navbar-icon"></i></a></li>
+            <li><a href="./carrinho.php"><i class="bi bi-cart" class="navbar-icon"></i></a></li>
         </ul>
     </nav>
     <div class="problemas">
