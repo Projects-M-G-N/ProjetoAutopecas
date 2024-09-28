@@ -65,3 +65,10 @@ CREATE TABLE IF NOT EXISTS problema (
 );
 
 INSERT INTO fornecedor VALUES (1, 'Mateus', 'mateus@mateus.com', '(83) 123456-111111', 'Mãe dagua');
+
+INSERT INTO produto VALUES (NULL, "Bomba Injetora 312d", "Bomba Injetora 312d (base De Troca) Bosch", 3887, "bomba_injetora.jpg", 100, 1),
+						   (NULL, "Corrente Esteira - S45", "Corrente Esteira - S45 | F1 4x4", 956.68, "corrente-de-esteira.jpg", 100, 1),
+                           (NULL, "Disco de Freio", "Disco de Freio Dianteiro HF25A para Chevrolet Vectra/Astra - HIPERFREIOS", 54.61, "disco_de_freio.jpg", 100, 1),
+                           (NULL, "Filtro de Óleo", "Filtro De Óleo Gm", 27.9, "filtro-de-oleo.jpg", 100, 1),
+                           (NULL, "Pneu 12.5/80-18", "Pneu 12.5/80-18 16 Lonas Tenx", 1625.26, "pneu.jpg", 100, 1),
+                           (NULL, "Retentor Brg Hm 83x70x7.5", "Retentor Brg Hm 83x70x7.5 Para Cilindro CADECO", 68, "retentores-de-cilindoros.jpg", 100, 1);

@@ -52,7 +52,7 @@ $produto = mysqli_fetch_all($produtos);
             ?>
                 <li><a href="cadProduto.php">Cadastrar Produto</a></li>
             <?php } ?>
-            <li><a href=""><i class="bi bi-cart" class="navbar-icon"></i></a></li>
+            <li><a href="./carrinho.php"><i class="bi bi-cart" class="navbar-icon"></i></a></li>
         </ul>
     </nav>
 
@@ -66,9 +66,9 @@ $produto = mysqli_fetch_all($produtos);
                     <div class="card-content">
                         <h2><?= $produto[$i][1] ?></h2>
                         <div class="price">
-                            <?= $produto[$i][3] ?>
+                            R$ <?= $produto[$i][3] ?>
                         </div>
-                        <button>Adicionar ao carrinho</button>
+                        <button onclick="window.location.href='./addCarrinho.php&idProd=<?= $produto[$i][0]?>'">Adicionar ao carrinho</button>
                     </div>
                 </div>
             <?php } ?>
