@@ -81,7 +81,7 @@ if (isset($_COOKIE['itens'])) {
         }
         ?>
         <div class="finalizar-compra">
-            <p>Preço total da compra: <?= $preco_total?></p>
+            <p>Preço total da compra: R$<?= $preco_total?></p>
             <button onclick="window.location.href='./finalizarCompras.php'">Finalizar Compra</button>
         </div>
     <?php

@@ -224,3 +224,121 @@ header .user .user-btn:hover {
 .navbar ul li a .bi {
     font-size: 1.5rem;
 }
+
+.finalizar-compra {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.finalizar-compra p {
+    font-size: 1.8em;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
+}
+
+.finalizar-compra .price-highlight {
+    color: #ff5722;
+    font-size: 2em;
+}
+
+.finalizar-compra button {
+    background-color: #ff5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 300px;
+}
+
+.finalizar-compra button:hover {
+    background-color: #e64a19;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-controls button.remove-btn {
+    background-color: #ff5252;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card-controls button.remove-btn:hover {
+    background-color: #ff1744;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card-controls button.remove-btn:active {
+    background-color: #d50000;
+    transform: scale(0.98);
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 15px;
+}
+
+.card-content {
+    flex-grow: 1;
+}
+
+.card-content h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 5px 0;
+}
+
+.card-content .price {
+    font-size: 1.4em;
+    color: #ff5722;
+    font-weight: bold;
+}
+
+.rem button {
+    background-color: #ff5252;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rem button:hover {
+    background-color: #ff1744;
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
