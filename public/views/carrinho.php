@@ -2,7 +2,10 @@
 
 require '../config.php';
 
-$itens = unserialize($_COOKIE['itens']);
+if (isset($_COOKIE['itens'])) {
+    $itens = unserialize($_COOKIE['itens']);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -18,7 +21,7 @@ $itens = unserialize($_COOKIE['itens']);
 </head>
 
 <body>
-<header>    
+    <header>
         <a href="index.php">
             <h1>Super Auto peças</h1>
         </a>
@@ -41,7 +44,7 @@ $itens = unserialize($_COOKIE['itens']);
                 <li><a href="login.php">Login</a></li>
                 <li><a href="cadastro.php">Cadastro</a></li>
             <?php } ?>
-            
+
             <?php
             if (isset($_SESSION['login'])) {
             ?>
@@ -52,20 +55,39 @@ $itens = unserialize($_COOKIE['itens']);
     </nav>
     <h2 class="car">Carrinho de compra</h2>
     <?php
-    foreach ($itens as $item) {
-        $produto = mysqli_fetch_all(mysqli_query($conexao, "SELECT * FROM produto WHERE id='$item'"));
+    if (isset($_COOKIE['itens'])) {
+        $preco_total = 0;
+        $index_item = 0;
+        foreach ($itens as $item) {
+            $produto = mysqli_fetch_all(mysqli_query($conexao, "SELECT * FROM produto WHERE id='$item'"));
     ?>
-        <div class="product-list">
-            <div class="card">
-                <img src="public/assets/img/<?= $produto[0][4] ?>" alt="<?= $produto[0][1] ?>">
-                <div class="card-content">
-                    <h2><?= $produto[0][1] ?></h2>
-                    <div class="price">
-                        R$ <?= $produto[0][3] ?>
+            <div class="product-list">
+                <div class="card">
+                    <img src="public/assets/img/<?= $produto[0][4] ?>" alt="<?= $produto[0][1] ?>">
+                    <div class="card-content">
+                        <h2><?= $produto[0][1] ?></h2>
+                        <div class="price">
+                            R$ <?= $produto[0][3] ?>
+                        </div>
+                    </div>
+                    <div class="rem">
+                        <button onclick="window.location.href='./removerCarrinho.php&index=<?= $index_item?>'">Remover</button>
                     </div>
                 </div>
             </div>
+        <?php
+        $preco_total += $produto[0][3];
+        $index_item += 1;
+        }
+        ?>
+        <div class="finalizar-compra">
+            <p>Preço total da compra: <?= $preco_total?></p>
+            <button onclick="window.location.href='./finalizarCompras.php'">Finalizar Compra</button>
         </div>
+    <?php
+    } else {
+    ?>
+        <h2>Nenhum item no carrinho!</h2>
     <?php
     }
     ?>
