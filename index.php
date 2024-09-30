@@ -1,15 +1,35 @@
+<?php
+
+session_start();
+
+$dbHost = 'localhost';
+$dbUsername ='root';
+$dbPassword = 'usbw';
+$dbName= 'sis_analise';
+
+$conexao= new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
+
+$produtos = mysqli_query($conexao, "SELECT * FROM produto");
+
+$produto = mysqli_fetch_all($produtos);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/assets/css/problemas.css">
+    <title>Super Auto peças</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <title>Problemas</title>
+    <link rel="stylesheet" href="./assets/css/inicio.css">
+
 </head>
+
 <body>
-    <header>    
+    <header>
         <a href="index.php">
             <h1>Super Auto peças</h1>
         </a>
@@ -22,17 +42,18 @@
                 <a href="user.php" class="user-btn" title="Seu perfil"><i class="bi bi-person-circle"></i></a>
             </div>
         <?php } ?>
+
     </header>
+
     <nav class="navbar">
         <ul>
-            <li><a href="index.php">Inicio</a></li>
             <?php
             if (!isset($_SESSION['login'])) {
             ?>
                 <li><a href="login.php">Login</a></li>
                 <li><a href="cadastro.php">Cadastro</a></li>
             <?php } ?>
-            
+            <li><a href="problemas.php">Problemas</a></li>
             <?php
             if (isset($_SESSION['login'])) {
             ?>
@@ -41,24 +62,25 @@
             <li><a href="./carrinho.php"><i class="bi bi-cart" class="navbar-icon"></i></a></li>
         </ul>
     </nav>
-    <div class="problemas">
-        <select name="problema" id="problema" onchange="verProduto(this.value)">
-            <option value="0" disabled selected>Selecione o problema</option>
-            <option value="1">Desgaste de Pneus</option>
-            <option value="2">Falhas no sistema hidráulico</option>
-            <option value="3">Super aquecimento do motor</option>
-            <option value="4">Sistema de freios</option>
-            <option value="5">Sistema elétrico</option>
-        </select>
-    </div>
-    <div class="produto">
-        <img src="" alt="">
-        <div class="produto-content">
-            <h2></h2>
-            <div class="price"></div>
-            <button id="comprar">Adicionar ao carrinho</button>
+
+    <main>
+        <h1>Produtos</h1>
+        <div class="product-list">
+            <?php
+            for ($i = 0; $i < mysqli_num_rows($produtos); $i++) { ?>
+                <div class="card">
+                    <img src="./assets/img/<?= $produto[$i][4] ?>" alt="<?= $produto[$i][1] ?>">
+                    <div class="card-content">
+                        <h2><?= $produto[$i][1] ?></h2>
+                        <div class="price">
+                            R$ <?= $produto[$i][3] ?>
+                        </div>
+                        <button onclick="window.location.href='./addCarrinho.php?idProd=<?= $produto[$i][0]?>'">Adicionar ao carrinho</button>
+                    </div>
+                </div>
+            <?php } ?>
         </div>
-    </div>
-    <script src="public/assets/js/problemas.js"></script>
+    </main>
 </body>
+
 </html>

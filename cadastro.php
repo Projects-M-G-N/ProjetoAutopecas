@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/assets/css/cadastro.css">
+    <link rel="stylesheet" href="./assets/css/cadastro.css">
     <title>Cadastro</title>
 </head>
 <body>
@@ -26,3 +26,28 @@
     </div>
 </body>
 </html>
+
+<?php 
+
+session_start();
+
+$dbHost = 'localhost';
+$dbUsername ='root';
+$dbPassword = 'usbw';
+$dbName= 'sis_analise';
+
+$conexao= new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
+
+if (isset($_POST['cadastrar'])) {
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $senha = $_POST['senha'];
+    $telefone = $_POST['telefone'];
+    $data = $_POST['data_nasc'];
+    $endereco = $_POST['endereco'];
+    $result = mysqli_query($conexao, "INSERT INTO cliente VALUES (NULL, '$nome','$email','$senha','$telefone','$data','$endereco')");
+    $_SESSION['login'] = true;
+    echo "<script>window.location.href = './'</script>";
+}
+
+?>

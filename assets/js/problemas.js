@@ -17,7 +17,7 @@ function verProduto(id) {
     if(id != 0) {
         btn.disabled = false;
     }
-    img.src = "public/assets/img/" + problemas[id][0];
+    img.src = "./assets/img/" + problemas[id][0];
     nome.innerHTML = problemas[id][1];
     preco.innerHTML = problemas[id][2];
 }

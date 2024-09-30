@@ -12,7 +12,7 @@ if (!isset($_SESSION['login'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/assets/css/cadProduto.css">
+    <link rel="stylesheet" href="./assets/css/cadProduto.css">
     <title>Cadastrar Produto</title>
 </head>
 
@@ -62,3 +62,33 @@ if (!isset($_SESSION['login'])) {
 </body>
 
 </html>
+
+<?php 
+
+$dbHost = 'localhost';
+$dbUsername ='root';
+$dbPassword = 'usbw';
+$dbName= 'sis_analise';
+
+$conexao= new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
+
+if (isset($_POST['cadProduto'])) {
+    $nome = $_POST['nome'];
+    $descricao = $_POST['descricao'];
+    $preco = $_POST['preco'];
+    $img = $_FILES["img"]["name"];
+    $novo_nome_do_arquivo = uniqid();
+    $extensao = strtolower(pathinfo($img, PATHINFO_EXTENSION));
+    $img_nome = $novo_nome_do_arquivo . "." .  $extensao;
+    move_uploaded_file($_FILES['img']['tmp_name'], ".././assets/img/" . $img_nome);
+    $quantidade = $_POST['quantidade'];
+    $fornecedor = $_POST['fornecedor'];
+
+    $comando = mysqli_query($conexao, "INSERT INTO produto VALUES (NULL, '$nome', '$descricao', '$preco', '$img_nome', '$quantidade', '1')");
+
+
+    echo "<script>window.location.href = './'</script>";
+}
+
+
+?>
