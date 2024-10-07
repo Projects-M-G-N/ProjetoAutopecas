@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 if (!isset($_SESSION['login'])) {
     header("Location: ./");
 }
@@ -80,7 +82,7 @@ if (isset($_POST['cadProduto'])) {
     $novo_nome_do_arquivo = uniqid();
     $extensao = strtolower(pathinfo($img, PATHINFO_EXTENSION));
     $img_nome = $novo_nome_do_arquivo . "." .  $extensao;
-    move_uploaded_file($_FILES['img']['tmp_name'], ".././assets/img/" . $img_nome);
+    move_uploaded_file($_FILES['img']['tmp_name'], "./assets/img/" . $img_nome);
     $quantidade = $_POST['quantidade'];
     $fornecedor = $_POST['fornecedor'];
 
