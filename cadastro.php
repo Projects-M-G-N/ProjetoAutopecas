@@ -47,6 +47,7 @@ if (isset($_POST['cadastrar'])) {
     $endereco = $_POST['endereco'];
     $result = mysqli_query($conexao, "INSERT INTO cliente VALUES (NULL, '$nome','$email','$senha','$telefone','$data','$endereco')");
     $_SESSION['login'] = true;
+    $_SESSION['email'] = $email;
     echo "<script>window.location.href = './'</script>";
 }
 

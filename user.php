@@ -1,3 +1,20 @@
+<?php 
+session_start();
+
+$dbHost = 'localhost';
+$dbUsername ='root';
+$dbPassword = 'usbw';
+$dbName= 'sis_analise';
+
+$conexao= new mysqli($dbHost,$dbUsername,$dbPassword,$dbName);
+
+$email = $_SESSION['email'];
+
+$comando = mysqli_query($conexao, "SELECT * FROM cliente WHERE email='$email'");
+
+$resultado = mysqli_fetch_assoc($comando);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -18,9 +35,9 @@
     <main>
         <section class="perfil">
             <img src="./assets/img/default.png" alt="Foto do Perfil" class="perfil-foto">
-            <h2 class="perfil-nome">Nome do Usuário</h2>
-            <p class="perfil-email">email@exemplo.com</p>
-            <p class="perfil-endereco">Rua XXXXX - numero XX</p>
+            <h2 class="perfil-nome"><?php echo $resultado['nome']?></h2>
+            <p class="perfil-email"><?php echo $email?></p>
+            <p class="perfil-endereco"><?php echo $resultado['endereco']?></p>
             <button class="editar-perfil">Editar Perfil</button>
         </section>
         <a href="./logout.php" class="sair"><i class="bi bi-box-arrow-right"></i> Sair</a>

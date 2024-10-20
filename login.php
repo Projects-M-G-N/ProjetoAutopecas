@@ -51,6 +51,7 @@ if (isset($_POST['login'])) {
             echo "<script>alert('Senha Incorreta')</script>";
         } else {
             $_SESSION['login'] = true;
+            $_SESSION['email'] = $email;
             echo "<script>window.location.href = './'</script>";
         }
     } else {
