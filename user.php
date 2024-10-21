@@ -38,7 +38,7 @@ $resultado = mysqli_fetch_assoc($comando);
             <h2 class="perfil-nome"><?php echo $resultado['nome']?></h2>
             <p class="perfil-email"><?php echo $email?></p>
             <p class="perfil-endereco"><?php echo $resultado['endereco']?></p>
-            <button class="editar-perfil">Editar Perfil</button>
+            <button class="editar-perfil" onclick="window.location.href='./editPerfil.php'">Editar Perfil</button>
         </section>
         <a href="./logout.php" class="sair"><i class="bi bi-box-arrow-right"></i> Sair</a>
     </main>
