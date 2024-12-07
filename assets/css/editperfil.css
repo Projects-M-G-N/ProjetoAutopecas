@@ -125,65 +125,61 @@ header .user .user-btn:hover {
     font-size: 1.5rem;
 }
 
-main {
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-    min-height: calc(100vh - 60px); 
-    text-align: center;
-    padding: 20px;
-}
 
-
-.perfil {
-    background-color: #fff;
+form {
+    background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+form h1 {
     margin-bottom: 20px;
+    font-size: 2em;
+    color: black;
 }
 
-.perfil-foto {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 20px;
+.inputbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
 }
 
-.perfil-nome {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.perfil-email, .perfil-endereco {
-    font-size: 14px;
-    color: var(--card-text-color);
-    margin-bottom: 20px;
-}
-
-.editar-perfil {
-    background-color: #ffd700;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
+.inputUser {
+    width: calc(50% - 15px);
+    padding: 12px;
+    border: 2px solid #ffca28;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-.editar-perfil:hover {
-    background-color: #e6b800;
-    transform: scale(1.05);
+.inputUser:focus {
+    border-color: #fbc02d;
+    box-shadow: 0 0 5px #fbc02d;
+    outline: none;
 }
 
-.sair {
-    color: #000;
-    text-decoration: none;
-    font-size: 1.5rem;
-    transition: color .8s;
-}
-
-.sair:hover {
+input[type="submit"] {
+    background-color: #ffca28;
     color: #fff;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: #fbc02d;
+    transform: scale(1.05);
 }

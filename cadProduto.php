@@ -15,15 +15,43 @@ if (!isset($_SESSION['login'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/cadProduto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <title>Cadastrar Produto</title>
 </head>
 
 <body>
-    <header>
+<header>
         <a href="index.php">
-            <h1>Cadastrar Produto - Super Auto peças</h1>
+            <h1>Super Auto peças</h1>
         </a>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+        <?php if (isset($_SESSION['login'])) { ?>
+            <div class="user">
+                <a href="user.php" class="user-btn" title="Seu perfil"><i class="bi bi-person-circle"></i></a>
+            </div>
+        <?php } ?>
     </header>
+    <nav class="navbar">
+        <ul>
+            <?php
+            if (!isset($_SESSION['login'])) {
+            ?>
+                <li><a href="index.php">Inicio</a></li>
+                <li><a href="login.php">Login</a></li>
+            <?php } ?>
+            <li><a href="problemas.php">Problemas</a></li>
+            <?php
+            if (isset($_SESSION['login'])) {
+            ?>
+                <li><a href="index.php">Inicio</a></li>
+            <?php } ?>
+            <li><a href="./carrinho.php"><i class="bi bi-cart" class="navbar-icon"></i></a></li>
+        </ul>
+    </nav>
     <main>
         <div class="cad-container">
             <form action="" method="post" enctype="multipart/form-data">
